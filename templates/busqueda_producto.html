@@ -1,0 +1,40 @@
+
+
+{% block title %} RESULTADOS DE TU BUSQUEDA {% endblock %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> </title>
+</head>
+<body>
+        <p> Estas buscando <strong> {{query}} </strong> </p>
+
+        {% if articulos %}
+
+        <ul>
+
+            {% for articulo in articulos %}
+
+            <li>
+
+                    {articulo.nombre }
+            </li>
+
+            {% endfor %}
+
+        </ul>
+
+        {% else %}
+    
+
+        <p> El articulo no fue encontrado en la base de datos </p>
+
+        {% endif %}
+</body>
+</html>
+
+
